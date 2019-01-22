@@ -1,0 +1,41 @@
+<div class="right-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<h2 class="text-center">Weather Readings</h2>
+			</div>
+			<div *ngFor="let Value of val" class="col-md-4 col-sm-6 col-xs-12">
+				<div class="panel panel-default">
+				    <div class="panel-heading text-center">{{Value[0].name}}</div>
+				    <div class="panel-body">
+				    	<div class="text-center">
+				    		<div class='top'>
+				    			<img class='icon' src='{{Value[0].icon}}'>
+				    			<h4 class='temp'>{{Value[0].temp}}°C</h4>
+				    			<p><b>{{Value[0].description}}</b></p>
+				    			<div class='dt'>
+				    				<p><i class='fa fa-calendar' aria-hidden='true'></i> {{Value[0].date}}</p>
+				    				<p><i class='fa fa-clock-o' aria-hidden='true'></i> {{Value[0].time}}</p>
+				    			</div>
+				    		</div>
+				    		<div class='parts'>
+				    			<div class='part'>
+					    			<p><b>Humidity</b></p>
+					    			<p>{{Value[0].humidity}}%</p>
+					    		</div>
+					    		<div class='part'>
+					    			<p><b>Pressure</b></p>
+					    			<p>{{Value[0].pressure}}pha</p>
+					    		</div>
+					    		<div class='part'>
+					    			<p><b>Wind</b></p>
+					    			<p>{{Value[0].wind}}m/s</p>
+					    		</div>
+				    		</div>
+				    	</div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
